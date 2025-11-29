@@ -12,15 +12,11 @@ A lightweight, native command-line mouse jiggler for macOS that prevents your Ma
 - **Graceful Shutdown**: Clean exit with Ctrl+C
 - **No External Dependencies**: Uses built-in macOS frameworks
 
-## Requirements
-
-- macOS (tested on macOS 10.14+)
-- Python 3.6 or higher
-- pyobjc-framework-Quartz (installed automatically by install script)
-
 ## Installation
 
-### Via Homebrew (Recommended)
+### 🍺 Homebrew (Recommended)
+
+The easiest way to install Mac Mouse Jiggler:
 
 ```bash
 brew tap i4ali/jiggler
@@ -28,6 +24,24 @@ brew install jiggler
 ```
 
 That's it! The `jiggler` command will be available globally.
+
+**Update to latest version:**
+```bash
+brew upgrade jiggler
+```
+
+**Uninstall:**
+```bash
+brew uninstall jiggler
+brew untap i4ali/jiggler
+```
+
+## Requirements
+
+- macOS 10.14+ (Mojave or later)
+- Installed automatically via Homebrew, or if installing manually:
+  - Python 3.8+
+  - pyobjc-framework-Quartz
 
 ### Upgrading from Manual Installation
 
@@ -39,7 +53,7 @@ sudo rm /usr/local/bin/jiggler
 rm -rf ./venv  # In the project directory
 
 # 2. Install via Homebrew
-brew tap yourusername/jiggler
+brew tap i4ali/jiggler
 brew install jiggler
 
 # 3. Verify
