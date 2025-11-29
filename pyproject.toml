@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mac-jiggler"
+version = "1.0.0"
+description = "Mac Mouse Jiggler - Prevents your Mac from going to sleep"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+keywords = ["macos", "mouse", "jiggler", "awake", "sleep", "prevent-sleep", "utility"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: MacOS",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "pyobjc-framework-Quartz>=12.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/i4ali/myjiggler"
+Repository = "https://github.com/i4ali/myjiggler"
+Issues = "https://github.com/i4ali/myjiggler/issues"
+
+[project.scripts]
+jiggler = "jiggler.cli:main"
+
+[tool.setuptools]
+packages = ["jiggler"]

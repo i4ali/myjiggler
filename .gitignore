@@ -19,3 +19,11 @@ ENV/
 
 # macOS
 .DS_Store
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Homebrew
+*.bottle.*

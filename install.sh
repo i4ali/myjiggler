@@ -8,7 +8,21 @@ INSTALL_DIR="/usr/local/bin"
 SCRIPT_NAME="jiggler"
 VENV_DIR="$SCRIPT_DIR/venv"
 
-echo "🖱️  Installing Mac Mouse Jiggler..."
+echo "⚠️  DEPRECATED: This installation method is deprecated."
+echo "   Please use Homebrew installation instead:"
+echo ""
+echo "     brew tap yourusername/jiggler"
+echo "     brew install jiggler"
+echo ""
+echo "   Continue with legacy installation? (y/N)"
+read -r response
+if [[ ! "$response" =~ ^[Yy]$ ]]; then
+    echo "Installation cancelled. Please use Homebrew instead."
+    exit 0
+fi
+echo ""
+
+echo "🖱️  Installing Mac Mouse Jiggler (legacy method)..."
 echo ""
 
 # Check if running on macOS

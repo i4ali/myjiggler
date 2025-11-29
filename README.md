@@ -20,7 +20,38 @@ A lightweight, native command-line mouse jiggler for macOS that prevents your Ma
 
 ## Installation
 
-### Quick Install
+### Via Homebrew (Recommended)
+
+```bash
+brew tap i4ali/jiggler
+brew install jiggler
+```
+
+That's it! The `jiggler` command will be available globally.
+
+### Upgrading from Manual Installation
+
+If you previously used `install.sh`, migrate to Homebrew:
+
+```bash
+# 1. Remove old installation
+sudo rm /usr/local/bin/jiggler
+rm -rf ./venv  # In the project directory
+
+# 2. Install via Homebrew
+brew tap yourusername/jiggler
+brew install jiggler
+
+# 3. Verify
+which jiggler  # Should show /opt/homebrew/bin/jiggler or /usr/local/bin/jiggler
+jiggler --help
+```
+
+All command-line options remain identical - no retraining needed!
+
+### Legacy: Quick Install (install.sh)
+
+**Note:** This method is deprecated. Please use Homebrew installation above.
 
 ```bash
 ./install.sh
@@ -41,7 +72,7 @@ If the install script fails at the symlink step, run this manually:
 sudo ln -sf "$(pwd)/jiggler" /usr/local/bin/jiggler
 ```
 
-### Manual Installation (Without install.sh)
+### Legacy: Manual Installation (Without install.sh)
 
 ```bash
 # Create virtual environment
